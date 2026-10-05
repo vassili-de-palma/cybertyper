@@ -1,0 +1,50 @@
+# --- python ---
+*/__pycache__
+**/__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+
+# --- macOS junk ---
+.DS_Store
+**/.DS_Store
+
+# --- secrets ---
+# We keep .env.example committed, but .env (with real keys) stays local.
+.env
+*.key
+
+# --- runtime artefacts ---
+# NOTE: calibrations/ is VERSIONED (it's our geometric ground truth).
+# Per-run logs are not.
+runs/
+logs/
+*.parquet
+*.png
+!docs/**/*.png
+
+# --- legacy artefacts that are operator-specific and shouldn't be committed
+#     unless they go in calibrations/<robot_id>/<date>.json (see core/calibration.py) ---
+world_settings.json
+world_settings_load.json
+key_map.json
+key_map.jpg
+raw_capture.jpg
+scan_pose.json
+
+# --- per-session calibration outputs (regenerated each session) ---
+configs/press_depth.json
+configs/wrist_cam_intrinsics.json
+configs/camera_intrinsics.json
+configs/eye_to_hand.json
+configs/tip_offset.json
+
+# --- jpg/jpeg sample frames (keep optional via explicit add) ---
+*.jpg
+*.jpeg
+!docs/**/*.jpg
+!docs/**/*.jpeg

@@ -1,0 +1,27 @@
+# Core (everything in evals/ runs with these + the lerobot submodule)
+numpy>=1.26,<3
+scipy>=1.11
+ikpy>=3.4
+opencv-python>=4.9
+Pillow>=10.0
+python-dotenv>=1.0
+pytesseract>=0.3.10        # also install the tesseract binary: apt/brew install tesseract
+pytest>=8.0
+
+# Optional: alternative OCR backend (large: pulls torch)
+# easyocr>=1.7
+
+# Optional: vision-language-model anchor detector (`--detector vlm`)
+# google-generativeai>=0.7
+# anthropic>=0.40
+# transformers>=4.45 qwen-vl-utils>=0.0.8 accelerate>=0.30   # local Qwen2.5-VL
+
+# Optional: host-keyboard listener for eval3 --verify, and scripts/teleop_keyboard.py
+# pynput>=1.7
+
+# Optional: ChArUco rig calibration for the legacy open-loop pipeline
+# opencv-contrib-python>=4.9
+
+# Robot driver: git submodule, installed in editable mode
+#   git submodule update --init --recursive
+#   pip install -e ./lerobot

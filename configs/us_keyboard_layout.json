@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "description": "Canonical US ANSI staggered keyboard layout. Positions are key CENTERS in unit-pitch coordinates. One unit = one key pitch (~19.05 mm on a full-size keyboard, ~17-19 mm on most laptops). The origin (0,0) is the top-left of the `~` key. The homography pipeline (cybertyping/perception/homography.py) maps these to image pixels via at least 4 anchor-key detections. Stagger offsets follow ANSI: QWERTY row +0.5u, ASDF row +0.75u, ZXCV row +1.25u relative to the digit row.",
+  "units": {
+    "x": "key_pitch",
+    "y": "row_pitch"
+  },
+  "comment_on_y_axis": "y grows DOWNWARD (image-like), so row 0 is the top of the keyboard.",
+  "keys": {
+    "1": {
+      "x": 1.5,
+      "y": 0.5,
+      "type": "digit"
+    },
+    "2": {
+      "x": 2.5,
+      "y": 0.5,
+      "type": "digit"
+    },
+    "3": {
+      "x": 3.5,
+      "y": 0.5,
+      "type": "digit"
+    },
+    "4": {
+      "x": 4.5,
+      "y": 0.5,
+      "type": "digit"
+    },
+    "5": {
+      "x": 5.5,
+      "y": 0.5,
+      "type": "digit"
+    },
+    "6": {
+      "x": 6.5,
+      "y": 0.5,
+      "type": "digit"
+    },
+    "7": {
+      "x": 7.5,
+      "y": 0.5,
+      "type": "digit"
+    },
+    "8": {
+      "x": 8.5,
+      "y": 0.5,
+      "type": "digit"
+    },
+    "9": {
+      "x": 9.5,
+      "y": 0.5,
+      "type": "digit"
+    },
+    "0": {
+      "x": 10.5,
+      "y": 0.5,
+      "type": "digit"
+    },
+    "q": {
+      "x": 2.0,
+      "y": 1.5,
+      "type": "letter"
+    },
+    "w": {
+      "x": 3.0,
+      "y": 1.5,
+      "type": "letter"
+    },
+    "e": {
+      "x": 4.0,
+      "y": 1.5,
+      "type": "letter"
+    },
+    "r": {
+      "x": 5.0,
+      "y": 1.5,
+      "type": "letter"
+    },
+    "t": {
+      "x": 6.0,
+      "y": 1.5,
+      "type": "letter"
+    },
+    "y": {
+      "x": 7.0,
+      "y": 1.5,
+      "type": "letter"
+    },
+    "u": {
+      "x": 8.0,
+      "y": 1.5,
+      "type": "letter"
+    },
+    "i": {
+      "x": 9.0,
+      "y": 1.5,
+      "type": "letter"
+    },
+    "o": {
+      "x": 10.0,
+      "y": 1.5,
+      "type": "letter"
+    },
+    "p": {
+      "x": 11.0,
+      "y": 1.5,
+      "type": "letter"
+    },
+    "a": {
+      "x": 2.25,
+      "y": 2.5,
+      "type": "letter"
+    },
+    "s": {
+      "x": 3.25,
+      "y": 2.5,
+      "type": "letter"
+    },
+    "d": {
+      "x": 4.25,
+      "y": 2.5,
+      "type": "letter"
+    },
+    "f": {
+      "x": 5.25,
+      "y": 2.5,
+      "type": "letter"
+    },
+    "g": {
+      "x": 6.25,
+      "y": 2.5,
+      "type": "letter"
+    },
+    "h": {
+      "x": 7.25,
+      "y": 2.5,
+      "type": "letter"
+    },
+    "j": {
+      "x": 8.25,
+      "y": 2.5,
+      "type": "letter"
+    },
+    "k": {
+      "x": 9.25,
+      "y": 2.5,
+      "type": "letter"
+    },
+    "l": {
+      "x": 10.25,
+      "y": 2.5,
+      "type": "letter"
+    },
+    "z": {
+      "x": 2.75,
+      "y": 3.5,
+      "type": "letter"
+    },
+    "x": {
+      "x": 3.75,
+      "y": 3.5,
+      "type": "letter"
+    },
+    "c": {
+      "x": 4.75,
+      "y": 3.5,
+      "type": "letter"
+    },
+    "v": {
+      "x": 5.75,
+      "y": 3.5,
+      "type": "letter"
+    },
+    "b": {
+      "x": 6.75,
+      "y": 3.5,
+      "type": "letter"
+    },
+    "n": {
+      "x": 7.75,
+      "y": 3.5,
+      "type": "letter"
+    },
+    "m": {
+      "x": 8.75,
+      "y": 3.5,
+      "type": "letter"
+    },
+    "space": {
+      "x": 6.875,
+      "y": 4.5,
+      "type": "special",
+      "width": 6.25,
+      "height": 1.0
+    },
+    "enter": {
+      "x": 13.875,
+      "y": 2.5,
+      "type": "special",
+      "width": 2.25,
+      "height": 1.0,
+      "note": "ANSI 2.25u Enter spans columns 12.75-15.0; center at x=13.875. Previous x=12.875 was off by one column and put presses on the apostrophe key."
+    },
+    "tab": {
+      "x": 0.75,
+      "y": 1.5,
+      "type": "special",
+      "width": 1.5,
+      "height": 1.0
+    },
+    "caps": {
+      "x": 0.875,
+      "y": 2.5,
+      "type": "special",
+      "width": 1.75,
+      "height": 1.0
+    },
+    "shift_l": {
+      "x": 1.125,
+      "y": 3.5,
+      "type": "special",
+      "width": 2.25,
+      "height": 1.0
+    },
+    "backspace": {
+      "x": 12.5,
+      "y": 0.5,
+      "type": "special",
+      "width": 2.0,
+      "height": 1.0
+    }
+  },
+  "recommended_anchors": [
+    "q",
+    "p",
+    "z",
+    "m",
+    "space",
+    "enter"
+  ],
+  "anchor_rationale": "Q and P span the QWERTY row (max x-extent at y=1.5). Z and M span the ZXCV row (max x-extent at y=3.5). Space gives the vertical extent. Enter pins the right side. Six anchors overconstrain the 8-DoF homography 12-DoF (=image_quad to canonical_quad) -- one can fail without breaking the solve."
+}

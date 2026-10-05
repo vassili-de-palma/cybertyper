@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cybertyping"
+version = "1.0.0"
+description = "SO-101 robot arm typing on an unseen keyboard with a wrist camera: OCR/VLM key detection + closed-loop visual servoing."
+requires-python = ">=3.10"
+readme = "README.md"
+dependencies = [
+    "numpy>=1.26,<3",
+    "scipy>=1.11",
+    "ikpy>=3.4",
+    "opencv-python>=4.9",
+    "Pillow>=10.0",
+    "python-dotenv>=1.0",
+    "pytesseract>=0.3.10",          # plus the `tesseract` OS binary
+]
+
+[project.optional-dependencies]
+# Alternative OCR backends
+easyocr = ["easyocr>=1.7"]
+paddle = ["paddleocr>=2.7", "paddlepaddle>=2.6"]
+# Vision-language-model anchor detectors (`--detector vlm`)
+gemini = ["google-generativeai>=0.7"]
+claude = ["anthropic>=0.40"]
+qwen = ["transformers>=4.45", "qwen-vl-utils>=0.0.8", "accelerate>=0.30"]
+molmo = ["transformers>=4.45", "accelerate>=0.30", "einops>=0.7"]
+# Host-keyboard listener for `--verify`, and the teleop script
+verify = ["pynput>=1.7"]
+# ChArUco rig calibration for the legacy open-loop pipeline
+charuco = ["opencv-contrib-python>=4.9"]
+test = ["pytest>=8.0"]
+all = [
+    "easyocr>=1.7", "google-generativeai>=0.7", "anthropic>=0.40",
+    "pynput>=1.7", "opencv-contrib-python>=4.9", "pytest>=8.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["cybertyping*"]
+exclude = ["lerobot*", "SO101*", "tests*", "scripts*", "evals*", "reference*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
